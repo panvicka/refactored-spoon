@@ -9,11 +9,22 @@
 
 const race = '100m Dash';
 const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
+// i need to sort data into object
+// implicit return with object literal
+const win = winners.map((winner,i) => ({
+  name: winner,
+  // race: race, // race: rase is weird, now can be only race 
+  race,
+  place: i+1
+}));
+
+console.table(win);
 
 
 
 
 // original code
+
 /* const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
 
 const ages = [23,62,45,234,2,62,234,62,34];
