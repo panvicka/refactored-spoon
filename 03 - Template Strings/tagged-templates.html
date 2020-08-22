@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Tagged Templates</title>
@@ -9,23 +10,41 @@
     }
   </style>
 </head>
+
 <body>
-<script>
-  function highlight(strings, ...values) {
-    let str = '';
-    strings.forEach((string, i) => {
-      str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
-    });
-    return str;
-  }
+  <script>
+    //original code 
+    /* function highlight(strings, ...values) {
+      let str = '';
+      strings.forEach((string, i) => {
+        str += `${string} <span contenteditable class="hl">${values[i] || ''}</span>`;
+      });
+      return str;
+    }
+   */
 
-  const name = 'Snickers';
-  const age = 100;
+    function highlight(string, ...value) {
 
-  const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
-  document.body.innerHTML = sentence;
-  console.log(sentence);
+      //debugger;
+      let str = '';
+      string.forEach((string, i) => {
+       // str += string + (value[i] || '');
+        str += `${string} <span contenteditable class="hl">${(value[i] || '')}</span>`;
+      });
+      console.log(str);
+      return str;
+    }
 
-</script>
+
+
+    const name = 'Snickers';
+    const age = 100;
+
+    const sentence = highlight`My dog's name is ${name} and he is ${age} years old`;
+    document.body.innerHTML = sentence;
+    console.log(sentence);
+
+  </script>
 </body>
+
 </html>
