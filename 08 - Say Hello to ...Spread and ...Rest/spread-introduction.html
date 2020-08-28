@@ -7,11 +7,31 @@
 <body>
 <script>
 
+ 
+
   const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
   const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
+  // combine the arrays together 
+  const pizzes = featured.concat(specialty); 
+  // if i need something in the middle? 
+  
+  const spreadString = [...'spread me!'];
+  console.log(spreadString);
 
+  const pizzes2 = [...featured, 'new item in the middle ', ...specialty];
+  console.log(pizzes2);
+
+  // for copying of array also good because this
+  const copyPizza = pizzes2;
+  // if you change copyPizza, the original pizzes2 will also change ... 
+  // it is not copied, only referenced 
+
+  // now we can spread
+  const copyPizzaReallyCopied = [...pizzes2];
+
+/* original code
   const pizzas = [...featured, 'veg', ...specialty];
-  const fridayPizzas = [...pizzas];
+  const fridayPizzas = [...pizzas]; */
 
   const deepDish = {
     pizzaName: 'Deep Dish',
