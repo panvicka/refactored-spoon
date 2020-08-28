@@ -16,7 +16,7 @@
     return converted;
   }
 
-  function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
+  function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {})  { // if is the function called without any argument put empty object as default
     return total + (tip * total) + (tax * total);
   }
 
