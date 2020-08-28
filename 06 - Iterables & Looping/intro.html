@@ -6,7 +6,61 @@
 </head>
 <body>
 <script>
-  /* eslint-disable */
+
+
+const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+
+//regular for loop, stupid syntax
+ for (let i = 0; i<cuts.length; i++) {
+   console.log(cuts[i]);
+ }
+
+// forEach method for array, can abort the loop, cant skip items
+// no break, no continue
+ cuts.forEach(cut=> {
+   console.log(cut);
+ })
+
+// for-in: ITERATES OVER EVERYTHING IN THE ARRAY INCLUDING STUFF ADDED BY PROGRAMMERS (ADDED FUNCTION PROTOTYPES ETC)
+cuts.shop = 'MM';
+// for-in loop: this gives index
+ for(const cut in cuts) {
+   console.log(cut);
+ }
+ // for-in loop: this gives us values
+ for(const index in cuts) {
+   console.log(cuts[index]);
+ }
+
+ // for of has the best of all 
+ // only goes thu stuff in array, can be broken out of or continued 
+ for (const cut of cuts) {
+   console.log(cut);
+   if (cut === 'Shank') {
+     break;
+   }
+ }
+
+ console.group('forOf');
+ for (const cut of cuts) {
+     if (cut === 'Brisket') {
+     continue;
+   }
+     console.log(cut);
+ }
+ console.groupEnd('forOf');
+
+
+
+
+
+
+
+
+
+
+/*   
+  
    Array.prototype.shuffle = function() {
      var i = this.length, j, temp;
      if ( i == 0 ) return this;
@@ -43,7 +97,7 @@
       continue;
     }
     console.log(cut);
-  }
+  } */
 
 </script>
 </body>
