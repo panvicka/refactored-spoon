@@ -1,0 +1,35 @@
+{
+  "name": "es6.io",
+  "version": "1.0.0",
+  "description": "![ES6 for Everyone](https://es6.io/images/es6-facebook-share.png?cool=yah)",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panvicka/refactored-spoon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panvicka/refactored-spoon/issues"
+  },
+  "homepage": "https://github.com/panvicka/refactored-spoon#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "dependencies": {
+    "eslint-plugin-html": "^6.1.0"
+  }
+}

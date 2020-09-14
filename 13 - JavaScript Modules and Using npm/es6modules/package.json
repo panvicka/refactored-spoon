@@ -1,0 +1,24 @@
+{
+  "name": "es6modules",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "private": "true",
+    "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "insane": "^2.6.2",
+    "jquery": "^3.5.1",
+    "jsonp": "^0.2.1",
+    "lodash": "^4.17.20",
+    "slug": "^3.3.4"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
