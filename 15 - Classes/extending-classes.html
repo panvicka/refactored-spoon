@@ -7,7 +7,36 @@
 <body>
 <script>
   /* eslint-disable */
+class Animal {
+  constructor(name) {
+    this.name = name;
+    this.thirst = 100;
+    this.belly = [];
+  }
+  drink() {
+    this.thirst -= 10;
+    return this.thirst;
+  }
+  eat(food) {
+    this.belly.push(food);
+    return this.belly;
+  }
+}
 
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); //creates animal before we create dog
+    //this.name = name; //this is set automatically in animal with belly and thirts
+    this.breed = breed; // this is new 
+  }
+
+  bark() {
+    console.log("bark");
+  }
+}
+
+const rhino = new Animal('Hroch');
+const snickers = new Dog('snickers', 'pudl');
 
 
 
