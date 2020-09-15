@@ -1,27 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Inheritance Review</title>
 </head>
+
 <body>
-<script>
-  function Dog(name, breed) {
-    this.name = name;
-    this.breed = breed;
-  }
+  <script>
+    /* eslint-disable */
+    function Dog(name, breed) { // constructor function - with lage D 
+      this.name = name;
+      this.breed = breed;
+    }
+    // add function to object 
+    Dog.prototype.bark = function () {
+      console.log(`haf haf ${this.name}`);
+    }
 
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark! My name is ${this.name}`);
-  };
+    const snickers = new Dog('snickers', 'doga');
+    const sunny = new Dog('sunny', 'misung');
 
-  Dog.prototype.cuddle = function() {
-    console.log(`I love you owner!`);
-  };
 
-  const snickers = new Dog('Snickers', 'King Charles');
-  const sunny = new Dog('Sunny', 'Golden Doodle');
+    Dog.prototype.bark = function () {
+      console.log(`haf haf haf haf ${this.name}`);
+    }
+    
+    Dog.prototype.cuddle = function () {
+      console.log(`wr wr wr ${this.name}`);
+    }
 
-</script>
+
+    // class in ES6 / class declaration
+    class Cat {
+
+    }
+    // class in ES6 / class expression
+    const Mouse = class {
+
+    }
+
+
+    class es6Dog {
+      // constructor needed
+      constructor(name, breed) {
+        this.name = name;
+        this.breed = breed;
+      }
+
+      get desc() {
+        return `${this.name} ${this.breed}`;
+      }
+
+      set nicknames(value) {
+        this.nick = value.trim();
+      }
+
+      get nicknames() {
+        return this.nick.toUpperCase();
+      }
+      
+      bark() {
+        console.log(`haf haf haf haf ${this.name}`);
+      }
+      cuddle() {
+        console.log(`wr wr wr ${this.name}`);
+      }
+      // static method can be only called on Dog dirrectly, not onto created dogs
+      static info() {
+        console.log('dog is ok');
+      }
+
+
+    }
+
+    const snickerses6 = new es6Dog('snickers', 'doga');
+    const sunnyes6 = new es6Dog('sunny', 'misung');
+
+
+
+
+
+
+
+
+  //old code
+    /*   function Dog(name, breed) {
+        this.name = name;
+        this.breed = breed;
+      }
+    
+      Dog.prototype.bark = function() {
+        console.log(`Bark Bark! My name is ${this.name}`);
+      };
+    
+      Dog.prototype.cuddle = function() {
+        console.log(`I love you owner!`);
+      };
+    
+      const snickers = new Dog('Snickers', 'King Charles');
+      const sunny = new Dog('Sunny', 'Golden Doodle'); */
+
+  </script>
 </body>
+
 </html>
