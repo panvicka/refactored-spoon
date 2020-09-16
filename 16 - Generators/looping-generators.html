@@ -6,7 +6,26 @@
 </head>
 <body>
 <script>
+  /*eslint-disable */
   function* lyrics() {
+    yield `But don't tell my heart`;
+    yield `My achy breaky heart`;
+    yield `I just don't think he'd understand`;
+    yield `And if you tell my heart`;
+    yield `My achy breaky heart`;
+    yield `He might blow up and kill this man`;
+  }
+
+  const generator = lyrics();
+  // if i dont want to call generator.next() i can loop thru
+  for (const line of generator) {
+    console.log(line);
+  }
+
+
+
+  // original code
+  /* function* lyrics() {
     yield `But don't tell my heart`;
     yield `My achy breaky heart`;
     yield `I just don't think he'd understand`;
@@ -19,7 +38,7 @@
 
   for (const line of achy) {
     console.log(line);
-  }
+  } */
 </script>
 </body>
 </html>

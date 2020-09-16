@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Generators</title>
 </head>
+
 <body>
-<script>
-  function* listPeople() {
-    let i = 0;
-    yield i;
-    i++;
-    yield i;
-    i++;
-    yield i;
-  }
+  <script>
+    /* eslint-disable */
+    // generator function - we can pause it, past additional info later,...
+    // with * afer functions
+    function* listPeople() {
+      console.log('man 1');
+      console.log('man 2');
+      console.log('man 3');
+      yield 'man 1 postponed'; //return for now 
+      yield 'man 2 postponed '; //return in next call 
+      yield 'man 3 postponed'; //return in next next call  
 
-  const people = listPeople();
-
-  const inventors = [
-    { first: 'Albert', last: 'Einstein', year: 1879 },
-    { first: 'Isaac', last: 'Newton', year: 1643 },
-    { first: 'Galileo', last: 'Galilei', year: 1564 },
-    { first: 'Marie', last: 'Curie', year: 1867 },
-    { first: 'Johannes', last: 'Kepler', year: 1571 },
-    { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
-    { first: 'Max', last: 'Planck', year: 1858 },
-  ];
-
-  function* loop(arr) {
-    console.log(inventors);
-    for (const item of arr) {
-      yield item;
     }
-  }
 
-  const inventorGen = loop(inventors);
+const people = listPeople();
 
 
-</script>
+
+   //original code
+    /*   function* listPeople() {
+        let i = 0;
+        yield i;
+        i++;
+        yield i;
+        i++;
+        yield i;
+      }
+    
+      const people = listPeople();
+    
+      const inventors = [
+        { first: 'Albert', last: 'Einstein', year: 1879 },
+        { first: 'Isaac', last: 'Newton', year: 1643 },
+        { first: 'Galileo', last: 'Galilei', year: 1564 },
+        { first: 'Marie', last: 'Curie', year: 1867 },
+        { first: 'Johannes', last: 'Kepler', year: 1571 },
+        { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
+        { first: 'Max', last: 'Planck', year: 1858 },
+      ];
+    
+      function* loop(arr) {
+        console.log(inventors);
+        for (const item of arr) {
+          yield item;
+        }
+      }
+    
+      const inventorGen = loop(inventors);
+     */
+
+  </script>
 </body>
+
 </html>
